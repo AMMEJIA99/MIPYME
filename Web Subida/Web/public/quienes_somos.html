@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css_reset.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lihe Design</title>
+  </head>
+  <body  class="white" style="color: black;">
+    <header class="header">
+    <!--Inicio de Barra de Navegacion-->
+    <nav >
+      <div class="nav-wrapper trans">
+          <div class="container">
+            <a href="index.html" class="brand-logo">
+              <img class="circle responsive-img  z-depth-4" src="img/logo.png" alt="Logo">
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes_somos.html">Quienes Somos</a></li>
+                <li><a href="productos.html">Productos</a></li>
+            </ul>
+          </div>
+      </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+      <li>
+          <form>
+              <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+              </div>
+          </form>
+      </li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes_somos.html">Quienes Somos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+  </ul>
+  <!--Fin de barra de navegacion indexada via id-->
+    </header>
+    <!--Inicio de Slider-->
+    <div class="slider hide-on-small-and-down ">
+      <ul class="slides">
+        <li>
+          <img class="responsive-img" src="img/Banner/Banner.png" alt="Sample image for first slide">
+          <div class="caption center-align">
+          </div>
+        </li>
+        <li>
+          <img class="responsive-img" src="img/Banner/Banner-2.png" alt="Sample image for second slide">
+          <div class="caption left-align">
+            
+          </div>
+        </li>
+        <li>
+          <img class="responsive-img" src="img/Banner/Banner-3.png" alt="Sample image for third slide">
+          <div class="caption right-align">
+            
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Fin Slider-->
+
+    <!-- Sección "Quiénes somos" -->
+    <div class="section">
+        <div class="row valign-wrapper">
+  
+        <!-- Columna de Información -->
+        <div class="col s12 m6" style="background-color: #ffffff; padding: 20px;">
+            <h4 style="color: #d94e7c; " >Nuestra Historia</h4>
+            <p style="color: #000000; font-size: 20px; text-align: justify;">
+            ¡Hola! mi nombre es <strong>Lilian Ivett Hernández Escobar</strong>, licenciada en Administración de Empresas, auditora de profesión y artesana de corazón.
+            Desde el año 2003 certificada en 9 técnicas de manualidad en INFOP en piñateria, porcelana fria, tarjeteria, bisutería, arreglores florales y otras técnicas. 
+            De 2004-2005 pasante de los cursos nocturnos de la Escuela de Bellas Artes.
+            He cursado cursos privados en encuadernación artesanal.
+            En 2021, creo Lihe Designs donde elaboramos piñatas, piezas en porcelana fria, tarjeteria y más, productos personalizados elaborados 100% a mano, con materia prima de calidad.. <br><br>
+            ¡Gracias por ser parte de este sueño!
+            </p>
+        </div>
+  
+        <!-- Columna de Imagen -->
+        <div class="col s12 m6 center-align">
+            <img src="img/Lilian.jpg" alt="Fundadora" class="founder-image" style="border-radius: 14px;">
+        </div>
+  
+        </div>
+    </div>
+  
+
+ <!--JavaScript at end of body for optimized loading-->
+ <script type="text/javascript" src="js/materialize.min.js"></script>
+ <script src="js/productos.js"></script>
+ <!--Estructura de menu despegable-->
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar dropdown
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+      hover:false
+    // Inicializar sidenav
+    var sidenavElems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenavElems);
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, {
+      height: 600,
+      duration:100,
+      interval: 2500,
+  
+      // specify options here
+      /** Optional function which generates ARIA label for each indicator */
+      indicatorLabelFunc: (idx, current) => {
+        let label = "Go to slide " + idx;
+        if (current) {
+          label = label + " (Current)";
+        }
+        return label;
+      }
+    });
+  });
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  M.AutoInit();
+});
+</script>
+
+<!-- Footer -->
+<footer class="page-footer black" style="padding-top:5px;">
+  <div class="container" style="padding-top: 30px;">
+    <div class="row">
+      <!-- Columna 1: Logo y mensaje -->
+      <div class="col s12 m4 center-align">
+        <img class="circle responsive-img" src="img/logo.png" alt="Logo Like Designs" style="width: 120px; height: auto;">
+      </div>
+
+      <!-- Columna 2: Información de contacto -->
+      <div class="col s12 m4">
+
+        <h6 style="color: #E8A6A6; font-weight: bold;">Teléfono</h6>
+        <p class="white-text">+504 31995030</p>
+
+        <h6 style="color: #E8A6A6; font-weight: bold;">Correo</h6>
+        <p class="white-text">lihedesigns@gmail.com</p>
+      </div>
+
+      <!-- Columna 3: Íconos de redes sociales -->
+      <div class="col s12 m4 center-align">
+        <h6 style="color: #E8A6A6; font-weight: bold;">Contáctanos</h6>
+        <a href="https://wa.me/50431995030" target="_blank" class="white-text" style="margin-right: 10px;">
+          <i class="fa-brands fa-whatsapp fa-2x"></i>
+        </a>
+        <a href="https://facebook.com/LiheDesigns?locale=es_LA" target="_blank" class="white-text" style="margin-right: 10px;">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://instagram.com/lihedesigns/" target="_blank" class="white-text" style="margin-right: 10px;">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://youtube.com/@LiheDesign" target="_blank" class="white-text">
+          <i class="fa-brands fa-youtube fa-2x"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Línea inferior del footer -->
+  <div class="footer-copyright black">
+    <div class="container center-align white-text">
+      © 2024 Lihe Designs - Todos los derechos reservados
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
+

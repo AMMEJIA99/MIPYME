@@ -1,0 +1,252 @@
+
+.trans{
+    background-color: rgba(228, 164, 181, 0.5) !important;
+}
+
+#pagination {
+    margin-top: 30px !important; /* Ajusta según lo que necesites */
+    margin-bottom: 30px !important;
+  }
+
+.brand-logo img {
+    width: 55px;    /* Establece el ancho */
+    height: 55px;   /* Establece la altura igual que el ancho */
+    border-radius: 50%;  /* Esto hace que la imagen sea circular */
+    object-fit: cover;   /* Asegura que la imagen se recorte adecuadamente */
+    margin-top: -10px;
+  }
+
+.card {
+    position: relative !important; /* Necesario para posicionar el botón en relación con la tarjeta */
+  }
+  
+.btn-floating {
+    position: absolute !important; /* Posición absoluta para que se coloque respecto al contenedor */
+    bottom: 16px !important; /* Distancia desde la parte inferior */
+    right: 16px !important; /* Distancia desde la parte derecha */
+    z-index: 1 !important; /* Para asegurarse de que el botón se vea por encima de otros elementos */
+    background-color: rgb(93, 193, 227) !important;
+  }
+  
+  
+  /* Si quieres cambiar el color al pasar el mouse */
+  .btn-floating:hover {
+    background-color: #0a4e7b !important; /* Un color más oscuro para el hover */
+  }
+  .card {
+    height: 350px; /* Altura fija para las tarjetas */
+    overflow: hidden; /* Esto asegura que el contenido que se desborda se oculte */
+  }
+  
+  .card .card-title {
+    white-space: nowrap; /* Evita que el texto se envuelva a varias líneas */
+    text-overflow: ellipsis; /* Agrega "..." si el texto es muy largo */
+    overflow: hidden; /* Esto asegura que el texto largo no se desborde */
+  }
+/* Estilo para el contenedor de categorías */
+.col.s3 {
+  border-right: 1px solid #ddd; /* Línea divisoria opcional */
+  padding-right: 10px;
+}
+/* Estilos para la columna de categorías */
+.col.s12.m4.l3 {
+  flex: 0 0 25%; /* Ancho fijo del 25% para las categorías */
+}
+.col.s12.m8.l9 {
+  flex: 0 0 75%; /* Ancho fijo del 75% para los productos */
+}
+
+/* Alinear los productos hacia la derecha */
+#product-grid {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Opcional: Espaciado entre categorías */
+.filter-category {
+  display: block;
+  margin: 5px 0;
+  color: rgb(51, 187, 232);/* Cambia el color si lo prefieres */
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.filter-category:hover {
+  text-decoration: underline;
+}
+
+
+/* Aseguramos que las columnas estén alineadas correctamente */
+.row { 
+  display: flex;
+  flex-wrap: nowrap;  /* No permite que las columnas se envuelvan, se alinean en una fila */
+  align-items: flex-start;  /* Alinea los elementos al inicio */
+}
+
+/* Agregar algún margen o padding si es necesario */
+.col {
+  padding: 5px;
+}
+/* Columna de productos */
+.col.s9 {
+  padding-left: 20px; /* Espacio entre la línea divisoria y el contenedor de productos */
+}
+/* Contenedor de categorías con borde derecho */
+.category-container {
+  border-right: 1px solid #ccc; /* Línea gris */
+  padding-right: 15px; /* Espacio interno a la derecha */
+  height: 100%; /* Asegura que el contenedor abarque toda la altura del contenido */
+  box-sizing: border-box; /* Asegura que el padding no altere el ancho total */
+}
+
+.cuadricula{
+  margin-top: 10px;
+  background-color: white;
+  flex: 0 0 100%; 
+}
+
+/* General: Estructura de las columnas */
+.features {
+  display: flex; /* Flexbox para alinear las columnas */
+  justify-content: space-between; /* Espaciado uniforme entre columnas */
+  align-items: center; /* Centrado vertical */
+  position: relative;
+}
+
+/* Columnas */
+.feature {
+  flex: 1; /* Asegura que las columnas ocupen el mismo ancho */
+  text-align: center;
+  padding: 20px;
+  position: relative; /* Necesario para la línea divisora */
+  margin-top: 30px;
+}
+
+/* Línea divisora vertical */
+.feature:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%; /* Ajusta la altura de la línea */
+  bottom: 10%;
+  right: 0;
+  width: 2px;
+  background-color: #aeacac; /* Color gris */
+}
+
+  .feature h6 {
+    font-size: 1.5rem;
+  }
+
+  .feature p {
+    font-size: 1rem;
+  }
+
+  .feature img {
+    width: 80px;
+    height: auto;
+  }
+h5 {
+    font-family: 'Roboto', sans-serif;  /* Cambiar a la fuente que prefieras */
+    font-weight: 700;  /* Peso de la fuente, puedes ajustarlo */
+    color: #333;  /* Color del texto */
+    font-size: 24px;  /* Tamaño de la fuente */
+    text-align: center;  /* Alineación centrada */
+    margin-bottom: 20px;  /* Espacio inferior */
+  }
+  ul li a {
+    font-family: 'Roboto', sans-serif;  /* Cambiar a la fuente que prefieras */
+    font-weight: 500;  /* Peso de la fuente, puedes ajustarlo */
+    font-size: 16px;  /* Tamaño de la fuente */
+    color: #555;  /* Color del texto */
+    text-transform: uppercase;  /* Opcional: convertir el texto a mayúsculas */
+    letter-spacing: 1px;  /* Espaciado entre letras */
+    padding: 10px 0;  /* Espaciado entre los enlaces */
+    display: block;
+  }
+  
+  ul li a:hover {
+    color: #FF5722;  /* Cambia el color al pasar el ratón sobre el enlace */
+  }
+
+
+/* Contenedor principal */
+.whatsapp-consulta {
+  background-color: rgb(115, 206, 232) !important;
+  padding: 10px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  display: flex; /* Elementos en línea */
+  align-items: center; /* Centrado vertical */
+  gap: 10px; /* Espaciado entre texto y botón */
+  margin-top: 10px; /* Espacio superior */
+  max-width: 300px; /* Ancho máximo */
+}
+
+/* Texto de referencia */
+.texto-consulta {
+  font-size: 14px;
+  color: #333; /* Color del texto */
+  font-weight: 600; /* Texto más grueso */
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+  background-color: #25d366; /* Color verde de WhatsApp */
+  color: #fff; /* Texto blanco */
+  text-transform: none; /* Evita mayúsculas automáticas */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57; /* Color más oscuro al pasar el mouse */
+}
+.founder-image{
+  max-width: 300px; /* Controla el tamaño máximo de la imagen */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 10px; /* Opcional: Bordes redondeados */
+  margin: 0 auto; /* Centra la imagen si es necesario */
+  display: block; /* Elimina márgenes extra */
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 50%;
+  padding-top: 56.25%; /* Relación de aspecto 16:9 (9/16 = 0.5625) */
+  margin-left: 170px;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.concurso{
+  padding-top: 60px;
+  padding-left: 100px;
+}
+/* Estilo para los recuadros de Misión y Visión */
+.recuadro {
+  background-color: #f8d4d4;  /* Color de fondo para los recuadros */
+  padding: 15px;
+  margin-top: 37px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar un efecto elevado */
+}
+
+.recuadro h6 {
+  font-size: 20px;
+  color: rgba(228, 164, 181); /* Color de título */
+  margin-bottom: 10px;
+}
+
+.recuadro p {
+  font-size: 16px;
+  color: #333; /* Color del texto */
+  text-align: justify;
+}

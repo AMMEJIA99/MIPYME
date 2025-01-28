@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css_reset.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lihe Design</title>
+  </head>
+  <body class="white" style="color: black;">
+    <header class="header">
+    <!--Inicio de Barra de Navegacion-->
+    <nav >
+      <div class="nav-wrapper trans">
+          <div class="container">
+            <a href="index.html" class="brand-logo"><img height="70vm" width="74vm" class=" circle responsive-img small z-depth-4" src="img/logo.png" style="vertical-align: middle;"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes_somos.html">Quienes Somos</a></li>
+                <li><a href="productos.html">Productos</a></li>
+            </ul>
+          </div>
+      </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+      <li>
+          <form>
+              <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+              </div>
+          </form>
+      </li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes_somos.html">Quienes Somos</a></li>
+      <li><a href="productos.html">Productos</a></li>
+  </ul>
+  <!--Fin de barra de navegacion indexada via id-->
+    </header>
+    <!--Inicio de Slider-->
+    <div class="slider hide-on-small-only">
+      <ul class="slides ">
+        <li>
+          <img class="responsive-img" src="img/Banner/Banner.png" alt="Sample image for first slide">
+          <div class="caption center-align">
+          </div>
+        </li>
+        <li>
+          <img class="responsive-img" src="img/Banner/Banner-2.png" alt="Sample image for second slide">
+          <div class="caption left-align">
+            
+          </div>
+        </li>
+        <li>
+          <img class="responsive-img"  src="img/Banner/Banner-3.png" alt="Sample image for third slide">
+          <div class="caption right-align">
+            
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Fin Slider-->
+
+     
+    <!--Contenedor de las categorias-->
+
+    <!--Inicio de Tarjetas-->
+    <div class="container-fluid">
+      <div class="row" >
+        <!-- Columna para las categorías -->
+        <div class="col s12 m4 l3 category-container">
+          <!-- Contenido de las categorías (por ahora vacío) -->
+          <h5>Categorías de Productos</h5>
+          <ul>
+            <li><a href="javascript:void(0);" class="filter-category waves-effect waves-light btn" data-category="all">Todos</a></li>
+            <li><a href="javascript:void(0);" class="filter-category waves-effect waves-light btn" data-category="Porcelana Fria">Porcelana Fría</a></li>
+            <li><a href="javascript:void(0);" class="filter-category waves-effect waves-light btn" data-category="Decoracion Fomie">Decoración Fomie</a></li>
+            <li><a href="javascript:void(0);" class="filter-category waves-effect waves-light btn" data-category="Piñata">Piñata</a></li>
+            <li><a href="javascript:void(0);" class="filter-category waves-effect waves-light btn" data-category="Tarjeta">Tarjetas</a></li>
+            <li><a href="javascript:void(0);" class="filter-category waves-effect waves-light btn" data-category="Decoracion">Decoracion</a></li>
+          </ul>
+        </div>
+        <div class="col s12 m8 l9">
+          <div class="row" id="product-grid">
+           <!--//Las tarjetas se gereran aqui-->
+          </div>
+          <!--Inicio de contenedor de navegacion-->
+          <div class="row center-align" id="pagination">
+          <!-- Aquí se crean los botones de paginación -->
+          </div>
+          <div id="modals-container">
+          <!-- Contenedor para los modales -->
+          </div>
+        </div>
+      </div>  
+    </div> 
+  
+   
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Archivo de productos -->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+<script src="js/productos.js"></script>
+ <!--JavaScript at end of body for optimized loading-->
+ <script type="text/javascript" src="js/materialize.min.js"></script>
+ <!--Estructura de menu despegable-->
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar dropdown
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+      hover:false
+    // Inicializar sidenav
+    var sidenavElems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenavElems);
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, {
+      height: 600,
+      duration:100,
+      interval: 2500,
+  
+      // specify options here
+      /** Optional function which generates ARIA label for each indicator */
+      indicatorLabelFunc: (idx, current) => {
+        let label = "Go to slide " + idx;
+        if (current) {
+          label = label + " (Current)";
+        }
+        return label;
+      }
+    });
+  });
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  M.AutoInit();
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Footer -->
+<footer class="page-footer black" style="padding-top:5px;">
+  <div class="container" style="padding-top: 30px;">
+    <div class="row">
+      <!-- Columna 1: Logo y mensaje -->
+      <div class="col s12 m4 center-align">
+        <img class="circle responsive-img" src="img/logo.png" alt="Logo Like Designs" style="width: 120px; height: auto;">
+      </div>
+
+      <!-- Columna 2: Información de contacto -->
+      <div class="col s12 m4">
+
+        <h6 style="color: #E8A6A6; font-weight: bold;">Teléfono</h6>
+        <p class="white-text">+504 31995030</p>
+
+        <h6 style="color: #E8A6A6; font-weight: bold;">Correo</h6>
+        <p class="white-text">lihedesigns@gmail.com</p>
+      </div>
+
+      <!-- Columna 3: Íconos de redes sociales -->
+      <div class="col s12 m4 center-align">
+        <h6 style="color: #E8A6A6; font-weight: bold;">Contáctanos</h6>
+        <a href="https://wa.me/50431995030" target="_blank" class="white-text" style="margin-right: 10px;">
+          <i class="fa-brands fa-whatsapp fa-2x"></i>
+        </a>
+        <a href="https://facebook.com/LiheDesigns?locale=es_LA" target="_blank" class="white-text" style="margin-right: 10px;">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://instagram.com/lihedesigns/" target="_blank" class="white-text" style="margin-right: 10px;">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://youtube.com/@LiheDesign" target="_blank" class="white-text">
+          <i class="fa-brands fa-youtube fa-2x"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Línea inferior del footer -->
+  <div class="footer-copyright black">
+    <div class="container center-align white-text">
+      © 2024 Lihe Designs - Todos los derechos reservados
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
+
